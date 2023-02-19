@@ -11,4 +11,10 @@ public class RESTEndpoint {
 	public String helloWorld() {
 		return "Hello World!";
 	}
+	
+	// /string?value=""
+	@GetMapping("/string")
+	public String string(@RequestParam("value") String value) {
+		return "Your string is " + value;
+	}
 }
