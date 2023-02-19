@@ -23,4 +23,9 @@ public class RESTEndpoint {
 	public String read(@PathVariable String sha3) {
 		return "Requested " + sha3;
 	}
+	
+	@GetMapping("/binary")
+	public byte[] binary() {
+		return "Binary string".getBytes();
+	}
 }
